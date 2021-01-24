@@ -1,0 +1,9 @@
+.setup {
+  background-color: rgb(252, 248, 248);
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.btn {
+  width: 250px;
+}

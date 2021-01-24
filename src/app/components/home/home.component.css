@@ -1,0 +1,12 @@
+.align-right {
+  text-align: right;
+  align-self: center;
+  margin-bottom: 5px;
+}
+
+.btn {
+  width: 250px;
+}
+.flex {
+  display: flex;
+}

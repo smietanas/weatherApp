@@ -1,0 +1,52 @@
+<div class="container">
+  <!-- dodawajka -->
+  <div class="row flex">
+    <div class="input-field col s8">
+      <input
+        id="task_name"
+        type="text"
+        class="validate"
+        [(ngModel)]="cityName"
+      />
+      <label for="task_name">Nazwa miasta</label>
+    </div>
+
+    <div class="input-field col s4 align-right">
+      <a class="waves-effect waves-light btn" (click)="addCityWeather()"
+        ><i class="material-icons left">search</i>Dodaj</a
+      >
+    </div>
+  </div>
+  <!-- tabela -->
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Miasto</th>
+        <th>Średnia progrnozowana temperatura</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let city of cities; let i = index">
+      <tr>
+        <td>{{ i + 1 }}</td>
+        <td>
+          <a [routerLink]="['/spec-city', city.id]">{{ city.cityName }} </a>
+        </td>
+        <td>
+          {{
+            actual === weatherlUnit.Celcius
+              ? city.temp
+              : (changeTempByUnit(city.temp) | number: "1.0-1")
+          }}°{{ actual }}
+        </td>
+        <td>
+          <button class="btn-floating btn-small red" (click)="remove(city)">
+            <i class="material-icons">remove </i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

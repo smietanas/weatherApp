@@ -1,0 +1,13 @@
+.btn {
+  margin-top: 10px;
+  width: 250px;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.td-width {
+  width: 25%;
+}

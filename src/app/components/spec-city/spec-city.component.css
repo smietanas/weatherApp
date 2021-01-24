@@ -1,0 +1,17 @@
+.pl-200 {
+  padding: 200px;
+}
+
+.td-width {
+  width: 25%;
+}
+
+.btn {
+  width: 250px;
+  margin-top: 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-end;
+}
